@@ -1,4 +1,4 @@
-name: 'Automatic sweepstakes'
+name: 'Automatic sweepstake'
 on:
   push:
     branches:
