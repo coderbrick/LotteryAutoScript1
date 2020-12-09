@@ -5,7 +5,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 */2 * * *'
 jobs:
   lottery:
     runs-on: ubuntu-latest
@@ -20,5 +20,6 @@ jobs:
         shell: bash
         env:
           COOKIE: ${{ secrets.COOKIE }}
+          SCKEY: ${{ secrets.SCKEY }}
         run:
-          node main.js COOKIE="$COOKIE"
+          node main.js
